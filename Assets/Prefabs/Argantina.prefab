@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: -6698513371400876618}
   - component: {fileID: 3718668912672456759}
   - component: {fileID: 3501492022136759008}
+  - component: {fileID: 6997494520682541593}
+  - component: {fileID: 8645611106642233344}
   m_Layer: 0
   m_Name: Argantina
   m_TagString: Untagged
@@ -112,12 +114,102 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!58 &8162085719198605861
 CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811029528437207740}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.030346155}
+  serializedVersion: 2
+  m_Radius: 0.064653836
+--- !u!114 &-6698513371400876618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811029528437207740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e89ea7193cfd884081c2aa3b64e7608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHuman: 1
+  moveSpeed: 6
+  shortPassForce: 6
+  longPassForce: 10
+  shootForce: 13
+  failForceMultiplier: 0.45
+  isSelected: 0
+--- !u!114 &3718668912672456759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811029528437207740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7b76c8bc379d84891342cfbf0d9d09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadzone: 0.1
+  fourWayOnly: 1
+  directionChangeThreshold: 0.15
+--- !u!95 &3501492022136759008
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811029528437207740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f394f27fb43857498552cd3acdc55f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &6997494520682541593
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,9 +241,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.095
---- !u!114 &-6698513371400876618
+  m_Size: {x: 0.13, y: 0.19}
+  m_Direction: 0
+--- !u!114 &8645611106642233344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,43 +252,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3811029528437207740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e89ea7193cfd884081c2aa3b64e7608, type: 3}
+  m_Script: {fileID: 11500000, guid: 13d191ddcf3cdbb40a9793779a11bbec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  ball: {fileID: 0}
-  shootPower: 15
-  isActive: 0
---- !u!114 &3718668912672456759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811029528437207740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd7b76c8bc379d84891342cfbf0d9d09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!95 &3501492022136759008
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3811029528437207740}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7f394f27fb43857498552cd3acdc55f3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  state: 0
+  isChaser: 0
+  homePoint: {fileID: 2823747332403293723}
+  opponentGoal: {fileID: 2823747332403293723}
+  myGoal: {fileID: 2823747332403293723}
+  shootRangeToGoal: 2.2
+  controlBallRange: 1.6
+  arriveStop: 0.25
+  pressureRadius: 1.8
+  returnHomeTime: 1
+  actionCooldown: 0.25
+  shootCooldown: 0.35

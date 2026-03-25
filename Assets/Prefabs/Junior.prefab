@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 8403450560169026839}
   - component: {fileID: 4609817697399442742}
   - component: {fileID: 2094398124805594835}
+  - component: {fileID: 5002546995423077949}
+  - component: {fileID: 8884231868297700252}
+  - component: {fileID: 6611371149537220327}
   m_Layer: 0
   m_Name: Junior
   m_TagString: Untagged
@@ -109,7 +112,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -145,6 +148,71 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04994605}
   serializedVersion: 2
-  m_Radius: 0.095
+  m_Radius: 0.04505394
+--- !u!95 &5002546995423077949
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529569769813081379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 36abcdcde5ec3ac41adedac7c0366c4d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8884231868297700252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529569769813081379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e89ea7193cfd884081c2aa3b64e7608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHuman: 0
+  moveSpeed: 3
+  shortPassForce: 6
+  longPassForce: 10
+  shootForce: 13
+  failForceMultiplier: 0.45
+  isSelected: 0
+--- !u!114 &6611371149537220327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7529569769813081379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9435a3ee61227ae45bab8c8332d2c2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 2
+  isChaser: 0
+  homePoint: {fileID: 1875525289891880954}
+  opponentGoal: {fileID: 1875525289891880954}
+  myGoal: {fileID: 1875525289891880954}
+  shootRangeToGoal: 2.2
+  chaseEnter: 1.9
+  chaseExit: 1.3
+  arriveStop: 0.25
+  pressureRadius: 1.8
+  returnHomeTime: 1
+  actionCooldown: 0.25
+  shootCooldown: 0.35
